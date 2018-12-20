@@ -1,0 +1,202 @@
+.menu_section_back_pic {
+    @include parallax;
+
+    background-image: url("../img/menu_backg.jpg");
+
+    @include for-tablet-portrait-up {
+        @include parallax;
+
+        background-image: url("../img/menu_backg.jpg");
+    }
+
+    @include for-phone-only {
+        display: none;
+    }
+}
+
+.position_relative {
+    height: 100%;
+    position: relative;
+}
+
+.indent {
+    z-index: 5;
+    position: absolute;
+    left: 7%;
+}
+
+.menu_section {
+    height: 1400px;
+    background-color: #f0a830;
+
+    @include for-phone-only {
+        height: 640px;
+    }
+
+    .menu_pic1 {
+        left: 26%;
+        z-index: 2;
+        @include menu_pic(-171px, 450px, 350px, -15px 15px $darkerGreen);
+        object-fit: fill;
+
+        @include for-phone-only {
+            display: none;
+        }
+    }
+
+    .menu_pic2 {
+        right: 0;
+        object-fit: fill;
+        @include menu_pic(-350px, 60vw, 63vh, -15px 15px $maccha);
+
+        @include for-tablet-landscape-up {
+            display: block !important;
+        }
+
+        @include for-tablet-portrait-up {
+            display: none;
+        }
+
+        @include for-phone-only {
+            display: none;
+        }
+    }
+
+    h1 {
+        font-size: $fontXl;
+        color: $lighterCream;
+        margin: 0%;
+        margin-bottom: 0.7em;
+        margin-top: 0.5em;
+        letter-spacing: 0.2em;
+        font-weight: bold;
+
+        @include for-phone-only {
+            font-size: 4.2rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    p {
+        width: 40%;
+        @include for-phone-only {
+            width: 100%;
+        }
+    }
+}
+
+.listbar_and_menu {
+    position: relative;
+    margin-top: 2em;
+    color: $deepGreen;
+
+    .menu_list_bar {
+        font-weight: bold;
+        z-index: 60;
+        margin-left: -12%;
+        width: 130%;
+        padding-left: 5%;
+        position: sticky;
+        top: 0;
+        max-width: 1070px;
+        background-color: $lighterCream;
+
+        @include for-tablet-portrait-up {
+            width: 112%;
+        }
+
+        @include for-phone-only {
+            display: none;
+        }
+    }
+
+    ul {
+        margin: 0;
+        display: flex;
+        padding: 1.5% 0;
+        font-size: $fontSm;
+    }
+
+    li {
+        margin-right: 3%;
+
+        @include for-tablet-portrait-up {
+            font-size: 1rem;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    margin-top: 3em;
+    color: $deepGreen;
+
+    @include for-phone-only {
+        display: none;
+    }
+
+    .menu1,
+    .menu2 {
+        width: 50%;
+    }
+
+    .menu1 {
+        margin-right: 16%;
+
+        @include for-phone-only {
+            margin-right: 5%;
+        }
+    }
+
+    .each_genre {
+        margin-bottom: 3em;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: $fontMd;
+        margin-bottom: 0.3em;
+    }
+
+    p + p {
+        margin-top: 5%;
+    }
+}
+
+.mb-menus {
+    display: none;
+
+    @include for-phone-only {
+        display: block;
+        position: absolute;
+        left: -7%;
+    }
+
+    .mb-menu {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        background-color: $deepGreen;
+        color: $cream;
+
+        &:hover {
+            opacity: 0.8;
+            background-color: $deepGreen;
+        }
+
+        &:focus {
+            opacity: 0.8;
+            background-color: $maccha;
+        }
+    }
+
+    .dropdown-menu {
+        background-color: $maccha;
+    }
+
+    .dropdown-item {
+        background-color: $maccha;
+    }
+}

@@ -1,0 +1,102 @@
+.review_section_back_pic {
+    @include parallax;
+    background-image: url("../img/review_backg.jpg");
+
+    @include for-phone-only {
+        display: none;
+    }
+}
+.review_section {
+    background-color: $cream;
+    height: 800px;
+
+    @include for-phone-only {
+        height: 700px;
+    }
+
+    .review_pic1 {
+        left: 26%;
+        z-index: 2;
+        @include menu_pic(-171px, 450px, 350px, -15px 15px $turqouise);
+
+        @include for-phone-only {
+            display: none;
+        }
+    }
+
+    .review_pic2 {
+        right: 0;
+        @include menu_pic(-350px, 60vw, 63vh, -15px 15px $vividOrange);
+
+        @include for-tablet-landscape-up {
+            display: block !important;
+        }
+
+        @include for-tablet-portrait-up {
+            display: none;
+        }
+
+        @include for-phone-only {
+            display: none;
+        }
+    }
+
+    .indent {
+        @include for-tablet-portrait-up {
+            margin-top: 5%;
+        }
+        @include for-phone-only {
+            margin-top: 5%;
+        }
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: $fontXl;
+        color: $brown;
+        margin: 0%;
+        margin-bottom: 0.7em;
+        padding-top: 0.5em;
+        letter-spacing: 0.2em;
+
+        @include for-tablet-portrait-up {
+            font-size: $fontLg;
+        }
+
+        @include for-phone-only {
+            font-size: 4.2rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    p {
+        width: 40%;
+        margin-bottom: 10%;
+        @include for-phone-only {
+            width: 85%;
+        }
+    }
+
+    .go_to_fb {
+        width: 15%;
+        height: 48px;
+        border-radius: 0;
+        color: $deepGreen;
+        border: 5px solid $deepGreen;
+        padding: 5px;
+
+        &:hover {
+            background-color: $deepGreen;
+            color: $cream;
+            border: 5px solid $deepGreen;
+        }
+
+        @include for-tablet-portrait-up {
+            width: 30%;
+        }
+
+        @include for-phone-only {
+            width: 85%;
+        }
+    }
+}

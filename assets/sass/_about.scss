@@ -1,0 +1,62 @@
+.about_section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about_left,
+.about_right {
+    width: 50%;
+    position: relative;
+}
+
+.about_left {
+    background-color: $turqouise;
+
+    @include for-phone-only {
+        height: 70%;
+        flex-grow: 99999;
+        flex-shrink: 1;
+        flex-basis: 400px;
+    }
+
+    h1 {
+        font-size: $fontMd;
+        color: $deepGreen;
+        font-weight: bold;
+
+        @include for-phone-only {
+            font-size: $fontSm;
+        }
+    }
+
+    ul {
+        color: $lighterCream;
+        font-size: 1.8vh;
+        @include for-phone-only {
+        }
+    }
+}
+
+.about_right {
+    position: relative;
+    background-color: $cream;
+
+    @include for-phone-only {
+        height: 30%;
+        flex-grow: 1;
+    }
+
+    .about_images {
+        display: flex;
+
+        @include for-phone-only {
+            width: 25%;
+            transform: rotate(90deg);
+            transform-origin: top;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
